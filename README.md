@@ -91,3 +91,7 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 ## Contributing
 
 Contributions of new Sieve scripts, improvements to existing ones, or documentation enhancements are welcome. Please feel free to submit pull requests or open issues to discuss new filter ideas.
+
+## TODO
+
+ - [ ] Need to really work on the spam check filtering. Only have a working stubb right now.
