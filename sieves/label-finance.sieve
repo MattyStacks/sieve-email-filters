@@ -18,5 +18,5 @@ if allof (environment :matches "vnd.proton.spam-threshold" "*", spamtest :value 
 if allof (
     address :all :comparator "i;unicode-casemap" :contains "From" "notification@paypal.com"
 ) {
-    fileinto "paypal";
+    fileinto "finance";
 }
