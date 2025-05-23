@@ -1,0 +1,24 @@
+require ["include", "environment", "variables", "relational", "comparator-i;ascii-numeric", "spamtest"];
+require ["fileinto", "imap4flags","vnd.proton.expire"];
+/*
+    * Filter is used to label steam sales emails. The steam sales emails are only good for about a week.
+*/
+
+# Set up variables
+set "steam_sender" "noreply@steampowered.com";
+set "steam_subject" "Steam wishlist is now on sale";
+
+# Generated: Do not run this script on spam messages
+if allof (environment :matches "vnd.proton.spam-threshold" "*", spamtest :value "ge" :comparator "i;ascii-numeric" "${1}") {
+    return;
+}
+
+ # If it comes from steam, and says that the wishlist is on sale, then expire it in 7 days.
+if allof (address :is "from" "${steam_sender}", header :comparator "i;unicode-casemap" :contains "Subject" "${steam_subject}") {
+    expire "day" "7";
+    fileinto "expiring";
+}
+
+if allof (address :is "from" "${steam_sender}", header :comparator "i;unicode-casemap" :contains "Subject" "${steam_subject}") {
+    fileinto "promotions";
+}
