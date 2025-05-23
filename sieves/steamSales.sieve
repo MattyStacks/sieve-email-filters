@@ -19,6 +19,7 @@ if allof (address :is "from" "${steam_sender}", header :comparator "i;unicode-ca
     fileinto "expiring";
 }
 
+# Can't do two fileinto commands in one if statement, so we have to do it twice.
 if allof (address :is "from" "${steam_sender}", header :comparator "i;unicode-casemap" :contains "Subject" "${steam_subject}") {
     fileinto "promotions";
 }
