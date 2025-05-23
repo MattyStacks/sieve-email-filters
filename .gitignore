@@ -1,0 +1,81 @@
+# Personal/Sensitive Information
+*.personal
+*.private
+*-personal.*
+*-private.*
+
+# Personal email addresses and domains
+personal-contacts.txt
+personal-domains.txt
+allowlist-personal.sieve
+whitelist-personal.sieve
+
+# Backup files
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+
+# Editor files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Windows
+*.lnk
+
+# Temporary files
+*.tmp
+*.temp
+/temp/
+/tmp/
+
+# Logs
+*.log
+logs/
+
+# Test files (unless you want to track them)
+test-*.sieve
+*-test.sieve
+sandbox/
+
+# Configuration files with personal data
+config-personal.txt
+my-filters.txt
+
+# Compiled/generated files
+*.compiled
+*.generated
+
+# Archive/old versions
+old/
+archive/
+deprecated/
+
+# Personal notes and drafts
+notes.txt
+notes.md
+draft-*.sieve
+personal-notes/
+
+# Email exports or samples
+*.eml
+*.mbox
+email-samples/
+
+# Documentation with personal info
+README-personal.md
+docs-personal/
